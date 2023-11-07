@@ -1,6 +1,6 @@
 Package: test2
 Title: This Package Contains Data From A Salivary Metabolome Study 
-Version: 0.0.0.9000
+Version: 0.0.0.1000
 Authors@R: 
     person(given = "Ana", last = "Stanciu", email = "stanciua@mcmaster.ca", role = c("aut", "cre"))
 Description: An example of minimal package.

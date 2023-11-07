@@ -1,0 +1,36 @@
+---
+title: "Data pre-process file"
+output: html_document
+date: "2023-11-07"
+---
+
+I have an excel file containing data from a metabolomics study. The data was taken from the paper "Women with temporomandibular disorders: Untargeted proton nuclear magnetic resonance spectroscopy-based metabolomics of saliva and psychological instruments dataset". Study authors: Sanches et al. 
+
+There is only one excel file. 
+
+Load the packages needed to preprocess the data:
+```{r}
+library(tidyverse)
+library(readxl)
+library(countrycode)
+```
+  
+Read the Excel file as a dataframe:
+```{r}
+RAW_DATA_metabolomic_of_saliva <- read_excel("/Users/anaruxandrastanciu/test2/data-raw/RAW DATA metabolomic of saliva.xlsx")
+```
+
+Get a summary of the dataframe:
+```{r}
+summary(RAW_DATA_metabolomic_of_saliva)
+```
+
+The sources of these data are as follows:
+
+- Sanches, M. L., Sforça, M. L., Turco, E. G. L., Faber, J., Smith, R. L., & Moraes, L. O. C. (2020). Women with temporomandibular disorders: Untargeted proton nuclear magnetic resonance spectroscopy-based metabolomics of saliva and psychological instruments dataset. Data in brief, 34, 106677. https://doi.org/10.1016/j.dib.2020.106677. Accessed Nov. 7th 2023
+
+Save to data folder:
+```{r}
+usethis::use_data(RAW_DATA_metabolomic_of_saliva,
+                  overwrite = TRUE)
+```
