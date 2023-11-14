@@ -1,0 +1,73 @@
+---
+title: "test2-vignette"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{test2-vignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+# This is the first data set of a study done by 1H- nuclear magnetic resonance-based
+# metabolomic spectroscopy of saliva samples from women with temporomandibular disorders (TMD). # The raw data is found in the folder `data-raw` as an Excel file. The data was published in 
+# 2021 however the pilot study was conducted from May 2017 to July 2018 at the 
+# Temporomandibular Disorder and Orofacial Pain Outpatient Clinic of the Escolar Paulista de 
+# Medicina da Universidade Federal de São Paulo/Hospital São Paulo. The data file contains 
+# information about 3 different groups - CONTROL,experimental (EG) before treatment (EG-pre) 
+# and EG post treatment (EG-post). The table contains levels of 58 metabolites in saliva for 
+# each participant.     
+
+# The raw data is part of the package called test2. To install the package directly from
+# GitHub, use this function:
+
+`if(!require(remotes)){
+    install.packages("remotes")
+    library(remotes)
+}`
+`remotes::install_github("stanciua19/test2", 
+                         build_vignettes = TRUE)`
+
+# Now that you have installed the package, load the package: 
+
+`library(test2)`
+
+# Try this:
+
+`?test2` 
+
+# To examine the dataset described above, use the following function: 
+
+`data(package = "test2")
+
+# To see the documentation for the dataset, use the following function: 
+
+`?test2-package`
+
+# The documentation contins information about the package, such as its name, author(s), and any # relevant references. 
+
+# To see the way the data in this package was preprocessed, use the following function: 
+
+`?Data_Preprocess_File_Saliva
+
+# The preprocessing file contains information about the preprocessing of the data such as the 
+# packages that need installing to preprocess the data, information about how to read the Excel file in R, how to get a summary of dataframe in R and sources of the data. 
+
+# The `multiplyr` function is included in this package as well, use the following function to 
+# multiply two numbers:
+
+#' @param a A number
+#' @param b A number
+#' @return The product of \code{a} and \code{b}
+#' @export
+#' @examples
+#' multiplyr(2, 5)
+#' multiplyr(4, 8)
+multiplyr <- function(a, b){
+  a * b
+}
+
+
+
+                       
+                        
+                    
+

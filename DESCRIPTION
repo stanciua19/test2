@@ -1,6 +1,6 @@
 Package: test2
 Title: This Package Contains Data From A Salivary Metabolome Study 
-Version: 0.0.0.1000
+Version: 0.0.0.2000
 Authors@R: 
     person(given = "Ana", last = "Stanciu", email = "stanciua@mcmaster.ca", role = c("aut", "cre"))
 Description: An example of minimal package.
@@ -13,3 +13,9 @@ BugReports: https://github.com/stanciua19/test2/issues
 Depends: 
     R (>= 2.10)
 LazyData: true
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: 
+    test2
